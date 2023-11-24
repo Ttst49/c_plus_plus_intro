@@ -19,15 +19,15 @@ int getAverage(){
 
     int number;
     int sum = 0;
-    for (int i = 0; i < 5; ++i) {
+    int number_of_marks;
+    cout << "Combien de notes voulez-vous associer pour récuperer une moyenne";
+    cin >> number_of_marks;
+    for (int i = 0; i < number_of_marks; ++i) {
         cout << "Donnez moi un nombre";
         cin >> number;
         sum += number;
     }
-
-    cout << "Votre moyenne est " << sum/5;
-
-
+    cout << "Votre moyenne est " << sum/number_of_marks;
     return 0;
 }
 
