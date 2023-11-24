@@ -49,7 +49,29 @@ int exchangeVariables(){
 }
 
 
+int getFullPriceFromKiloPrice(){
+
+    float prixAuKilo;
+    int nombresDeKilos;
+    float TVA;
+    float prixTTC;
+
+    cout << "Definissez le prix au kilo";
+    cin >> prixAuKilo;
+    cout << "Definissez le nombres de kilos achetés";
+    cin >> nombresDeKilos;
+    cout << "Definissez la TVA de ce produit";
+    cin >> TVA;
+
+    TVA = prixAuKilo * TVA/100;
+    prixTTC = (prixAuKilo + TVA) * (float)nombresDeKilos;
+    cout << "Le prix final est de " << prixTTC;
+
+
+    return 0;
+}
+
 int main(){
-    exchangeVariables();
+    getFullPriceFromKiloPrice();
     return 0;
 }
