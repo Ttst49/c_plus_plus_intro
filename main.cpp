@@ -32,7 +32,24 @@ int getAverage(){
 }
 
 
+int exchangeVariables(){
+
+    int numberA;
+    int numberB;
+    int tmp;
+    cout << "Donnez moi un nombre A";
+    cin >> numberA;
+    cout << "Donnez moi un nombre B";
+    cin >> numberB;
+    tmp = numberA;
+    numberA = numberB;
+    numberB = tmp;
+    cout << "Le nombre a est:" << numberA << endl << "Le nombre b est:" << numberB;
+    return 0;
+}
+
+
 int main(){
-    getAverage();
+    exchangeVariables();
     return 0;
 }
