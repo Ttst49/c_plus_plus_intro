@@ -15,8 +15,24 @@ int fieldInfo(){
     return 0;
 }
 
+int getAverage(){
+
+    int number;
+    int sum = 0;
+    for (int i = 0; i < 5; ++i) {
+        cout << "Donnez moi un nombre";
+        cin >> number;
+        sum += number;
+    }
+
+    cout << "Votre moyenne est " << sum/5;
+
+
+    return 0;
+}
+
 
 int main(){
-    fieldInfo();
+    getAverage();
     return 0;
 }
