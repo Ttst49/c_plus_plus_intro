@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -71,7 +72,30 @@ int getFullPriceFromKiloPrice(){
     return 0;
 }
 
+double getDistance(){
+
+    double x1,y1;
+    double x2,y2;
+    double x,y;
+    cout << "Donnez la coordonnée x1";
+    cin >> x1;
+    cout << "Donnez la coordonnée y1";
+    cin >> y1;
+    cout << "Donnez la coordonnée x2";
+    cin >> x2;
+    cout << "Donnez la coordonnée y2";
+    cin >> y2;
+    x = x2-x1;
+    x = pow(x,2);
+    y = y2-y1;
+    y = pow(y,2);
+
+    cout << "La distance entre les 2 coordonnées est x:"<< x << " y:" << y;
+    return 0;
+
+}
+
 int main(){
-    getFullPriceFromKiloPrice();
+    getDistance();
     return 0;
 }
