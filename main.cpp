@@ -1,18 +1,17 @@
 #include <iostream>
 #include <cmath>
 
-using namespace std;
 
 int fieldInfo(){
 
     int length;
     int width;
-    cout << "Donnez la longueur du champ" << endl;
-    cin >> length;
-    cout << "Donnez une largeur de champ" << endl;
-    cin >> width;
-    cout << "Le perimètre de votre champ est " << (length + width) * 2 << endl;
-    cout << "La surface de votre champ est " << length * width << endl;
+    std::cout << "Donnez la longueur du champ" << std::endl;
+    std::cin >> length;
+    std::cout << "Donnez une largeur de champ" << std::endl;
+    std::cin >> width;
+    std::cout << "Le perimètre de votre champ est " << (length + width) * 2 << std::endl;
+    std::cout << "La surface de votre champ est " << length * width << std::endl;
     return 0;
 }
 
@@ -21,14 +20,14 @@ int getAverage(){
     int number;
     int sum = 0;
     int number_of_marks;
-    cout << "Combien de notes voulez-vous associer pour récuperer une moyenne";
-    cin >> number_of_marks;
+    std::cout << "Combien de notes voulez-vous associer pour récuperer une moyenne";
+    std::cin >> number_of_marks;
     for (int i = 0; i < number_of_marks; ++i) {
-        cout << "Donnez moi un nombre";
-        cin >> number;
+        std::cout << "Donnez moi un nombre";
+        std::cin >> number;
         sum += number;
     }
-    cout << "Votre moyenne est " << sum/number_of_marks;
+    std::cout << "Votre moyenne est " << sum/number_of_marks;
     return 0;
 }
 
@@ -38,14 +37,14 @@ int exchangeVariables(){
     int numberA;
     int numberB;
     int tmp;
-    cout << "Donnez moi un nombre A";
-    cin >> numberA;
-    cout << "Donnez moi un nombre B";
-    cin >> numberB;
+    std::cout << "Donnez moi un nombre A";
+    std::cin >> numberA;
+    std::cout << "Donnez moi un nombre B";
+    std::cin >> numberB;
     tmp = numberA;
     numberA = numberB;
     numberB = tmp;
-    cout << "Le nombre a est:" << numberA << endl << "Le nombre b est:" << numberB;
+    std::cout << "Le nombre a est:" << numberA << std::endl << "Le nombre b est:" << numberB;
     return 0;
 }
 
@@ -57,16 +56,16 @@ int getFullPriceFromKiloPrice(){
     float TVA;
     float prixTTC;
 
-    cout << "Definissez le prix au kilo";
-    cin >> prixAuKilo;
-    cout << "Definissez le nombres de kilos achetés";
-    cin >> nombresDeKilos;
-    cout << "Definissez la TVA de ce produit";
-    cin >> TVA;
+    std::cout << "Definissez le prix au kilo";
+    std::cin >> prixAuKilo;
+    std::cout << "Definissez le nombres de kilos achetés";
+    std::cin >> nombresDeKilos;
+    std::cout << "Definissez la TVA de ce produit";
+    std::cin >> TVA;
 
     TVA = prixAuKilo * TVA/100;
     prixTTC = (prixAuKilo + TVA) * (float)nombresDeKilos;
-    cout << "Le prix final est de " << prixTTC;
+    std::cout << "Le prix final est de " << prixTTC;
 
 
     return 0;
@@ -77,22 +76,21 @@ double getDistance(){
     double x1,y1;
     double x2,y2;
     double x,y;
-    cout << "Donnez la coordonnée x1";
-    cin >> x1;
-    cout << "Donnez la coordonnée y1";
-    cin >> y1;
-    cout << "Donnez la coordonnée x2";
-    cin >> x2;
-    cout << "Donnez la coordonnée y2";
-    cin >> y2;
+    std::cout << "Donnez la coordonnée x1";
+    std::cin >> x1;
+    std::cout << "Donnez la coordonnée y1";
+    std::cin >> y1;
+    std::cout << "Donnez la coordonnée x2";
+    std::cin >> x2;
+    std::cout << "Donnez la coordonnée y2";
+    std::cin >> y2;
     x = x2-x1;
     x = pow(x,2);
     y = y2-y1;
     y = pow(y,2);
 
-    cout << "La distance entre les 2 coordonnées est x:"<< x << " y:" << y;
+    std::cout << "La distance entre les 2 coordonnées est x:"<< x << " y:" << y;
     return 0;
-
 }
 
 int main(){
