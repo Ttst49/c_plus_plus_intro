@@ -125,7 +125,24 @@ int getAbsolute(){
 }
 
 
+int valueBetween(){
+    double a,b,c;
+
+    std::cout << "Donnez un entier a";
+    std::cin >> a;
+    std::cout << "Donnez un entier b";
+    std::cin >> b;
+    std::cout << "Donnez un entier c";
+    std::cin >> c;
+    if (c<b && c>a || c>b && c<a){
+        std::cout << "Le nombre " << c << " est compris entre le nombre " << a << " et le nombre " << b;
+    } else{
+        std::cout << "Le nombre " << c << " n'est pas compris entre le nombre " << a << " et le nombre " << b;
+    }
+    return 0;
+}
+
 int main(){
-    getAbsolute();
+    valueBetween();
     return 0;
 }
