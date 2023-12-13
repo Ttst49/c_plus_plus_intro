@@ -93,7 +93,24 @@ double getDistance(){
     return 0;
 }
 
+
+
+int getHigher(){
+
+    int nbr1;
+    int higherNumber;
+    for (int i = 0; i < 5; ++i) {
+        std::cout << "Donnez un nombre";
+        std::cin >> nbr1;
+        if (nbr1 > higherNumber){
+            higherNumber = nbr1;
+        }
+    }
+    std::cout << "le nombre le plus haut entré est " << higherNumber;
+    return 0;
+}
+
 int main(){
-    getDistance();
+    getHigher();
     return 0;
 }
