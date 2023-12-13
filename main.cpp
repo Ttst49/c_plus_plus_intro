@@ -110,7 +110,22 @@ int getHigher(){
     return 0;
 }
 
+
+
+int getAbsolute(){
+    int userNumber;
+
+    std::cout << "Donnez un nombre qui sera converti en absolu";
+    std::cin >> userNumber;
+    if (userNumber<0){
+        userNumber = abs(userNumber);
+    }
+    std::cout << "L'absolu de votre nombre est " <<userNumber;
+    return 0;
+}
+
+
 int main(){
-    getHigher();
+    getAbsolute();
     return 0;
 }
