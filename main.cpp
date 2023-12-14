@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "array"
 
 
 int fieldInfo(){
@@ -154,9 +155,28 @@ int isOddAndBetweenBornes(){
     return 0;
 }
 
+int checkNumbersInArray(){
+
+    int arr[10];
+
+    for (int i = 0; i <= 9; ++i) {
+        std::cout << "Donnez le nombre qui sera dans le tableau à la valeur ["<<i<<"]";
+        std::cin >> arr[i];
+    }
+
+
+    for (int j : arr) {
+        if(j>=10){
+            std::cout << "la valeur " << j << " est supérieure ou égale à 10" << std::endl;
+        }
+    }
+
+    return 0;
+}
+
 
 
 int main(){
-    isOddAndBetweenBornes();
+    checkNumbersInArray();
     return 0;
 }
