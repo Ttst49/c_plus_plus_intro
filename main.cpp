@@ -142,7 +142,21 @@ int valueBetween(){
     return 0;
 }
 
+int isOddAndBetweenBornes(){
+    int a;
+    std::cout << "Donnez un nombre a";
+    std::cin >> a;
+    if (a % 2 == 1 && 84 <= a && a <= 101 ){
+        std::cout << "Votre nombre est impair et est compris entre 84 et 101";
+    } else{
+        std::cout << "Votre nombre n'est pas impair et n'est pas compris entre 84 et 101";
+    }
+    return 0;
+}
+
+
+
 int main(){
-    valueBetween();
+    isOddAndBetweenBornes();
     return 0;
 }
