@@ -212,7 +212,30 @@ int checkHigherNumberInArray(){
 }
 
 
+int checkIfVInArrayAndReplaceItByA0AtTheEnd()
+{
+    const int N=10;
+    int t[N],i,j,V;
+    bool trouve;
+    for(i=0;i<N;i++){std::cout<<"Tapez un entier ";std::cin>>t[i];}
+    std::cout<<"Tapez la valeur de V : ";std::cin>>V;
+
+    trouve=false;
+    i=0;
+    while(!trouve && i<N)
+        if(t[i]==V)trouve=true; else i++;
+
+    if(trouve)
+    {
+        for(j=i;j<N-1;j++)t[j]=t[j+1];
+        t[N-1]=0;
+    }
+    for(i=0;i<N;i++)std::cout<<t[i]<<std::endl;
+
+    return 0;
+}
+
 int main(){
-    checkHigherNumberInArray();
+    checkIfVInArrayAndReplaceItByA0AtTheEnd();
     return 0;
 }
