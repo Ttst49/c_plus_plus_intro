@@ -191,7 +191,28 @@ int checkIfVInArray(){
 
 
 
+int checkHigherNumberInArray(){
+
+    int tmpHigher,arr[10];
+
+    for (int i = 0; i <= 9; i++) {
+        std::cout << "Donnez un nombre qui sera dans le tableau à la valeur ["<<i<<"]";
+        std::cin >> arr[i];
+    }
+
+    for (int x = 0; x < 9; x++) {
+        std::cout << arr[x];
+        if (arr[x] > tmpHigher){
+            tmpHigher = arr[x];
+            std::cout << tmpHigher << std::endl;
+        }
+    }
+    std::cout << "Le chiffre le plus grand du tableau est " << tmpHigher;
+    return 0;
+}
+
+
 int main(){
-    checkIfVInArray();
+    checkHigherNumberInArray();
     return 0;
 }
