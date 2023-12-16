@@ -163,20 +163,35 @@ int checkNumbersInArray(){
         std::cout << "Donnez le nombre qui sera dans le tableau à la valeur ["<<i<<"]";
         std::cin >> arr[i];
     }
-
-
     for (int j : arr) {
         if(j>=10){
             std::cout << "la valeur " << j << " est supérieure ou égale à 10" << std::endl;
         }
     }
+    return 0;
+}
 
+
+int checkIfVInArray(){
+
+    int V,arr[10];
+    for (int i = 0; i <= 9; ++i) {
+        std::cout << "Donnez un nombre qui sera dans le tableau à la valeur ["<<i<<"]";
+        std::cin >> arr[i];
+    }
+    std::cout << "Donnez la valeur de V qui sera cherché dans le tableau";
+    std::cin >> V;
+    for (int j : arr) {
+        if (j == V){
+            std::cout << "La valeur " << V << " est dans le tableau";
+        }
+    }
     return 0;
 }
 
 
 
 int main(){
-    checkNumbersInArray();
+    checkIfVInArray();
     return 0;
 }
