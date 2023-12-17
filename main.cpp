@@ -235,6 +235,9 @@ int checkIfVInArrayAndReplaceItByA0AtTheEnd()
     return 0;
 }
 
+
+
+
 int main(){
     checkIfVInArrayAndReplaceItByA0AtTheEnd();
     return 0;
